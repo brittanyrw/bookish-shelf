@@ -18,15 +18,30 @@ body {
   width: 80%;
   height: 100%;
   margin: 0 auto;
-  border: 10px dimgray solid;
+  /* border: 15px purple solid; */
   overflow: hidden;
-  background-image: linear-gradient(white, white 340px, gray 340px, gray 342px, dimgray 342px, dimgray 348px, lightgray 348px, lightgray 350px);
+  background-image: linear-gradient(transparent, transparent 320px, white 320px, white 342px, white 342px, white 346px, white 348px, tan 350px);
   background-size: 10px 350px;
   /* box-shadow: 0px 1000px 0px 400px darkgray; */
   padding: 0 20px;
   max-width: 750px;
   display: block;
+  border: 15px solid tan;
+  border-right: 20px solid tan;
+  border-left: 20px solid tan;
+  position: relative;
+  z-index: 1;
 }
+
+/* .bookshelf-top:after {
+  position: absolute;
+  content: '';
+  height: 15px;
+  width: 100%;
+  left: 0;
+  bottom: -240px;
+  background-color: tan;
+} */
 
 .bookshelf-top {
   width: 80%;
@@ -34,6 +49,7 @@ body {
   margin: auto;
   text-align: center;
   display: block;
+  position: relative;
 }
 
 .letterboard {
@@ -76,6 +92,7 @@ body {
   font-family: Verdana, sans-serif;
   margin-bottom: 10px;
   margin-top: 20px;
+  border: 1px solid black;
   -webkit-transition: -webkit-transform 0.4s ease;
   transition: -webkit-transform 0.4s ease;
   transition: transform 0.4s ease;
@@ -360,7 +377,7 @@ body {
 .my-sister-the-serial-killer h2 {
   
   text-transform: uppercase;
-  font-size: .4em;
+  font-size: .35em;
   letter-spacing: 1.1px;
   -webkit-transform: rotate(0deg) translateY(0) translateX(0);
   transform: rotate(0deg) translateY(0) translateX(0);
