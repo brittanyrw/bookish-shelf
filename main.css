@@ -135,6 +135,14 @@ body {
   position: relative;
   background-color: gray;
   border: 2px solid dimgray;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+
+.book:hover {
+  transform: scale(1.2);
 }
 
 .book:after {
@@ -158,6 +166,10 @@ body {
     transform: rotate(-90deg) translateY(-4px) translateX(-340px);
     width: 352px;
     float: left;
+}
+
+.stacked .book {
+  margin-top: 20px;
 }
 
 .extra-small-book {
@@ -206,84 +218,11 @@ body {
 
 /* BOOK STYLES INDIVIDUAL */
 
-.book.whered-you-go-bernadette:after {
-  background-color: teal;
-}
-
-.book.my-sister-the-serial-killer:after {
-  background-color: black;
-}
-
-.book.the-power:after {
-  background-color: #CB4335;
-}
-.we-should-all-be-feminists {
-  background-color: #F5F2E2;
-  height: 260px;
-  margin-top: 80px;
-  border: 1px solid #A3A29B;
-  position: relative;
-}
-
-.the-power {
-  height: 290px;
-  margin-top: 50px;
-  background-color: #D95440;
-  border: 2px solid #8D372A;
-  position: relative;
-}
-
-.book.the-power h2 {
-  text-transform: uppercase;
-  font-size: 19px;
-  -webkit-transform: rotate(0deg) translateY(0) translateX(0);
-  transform: rotate(0deg) translateY(-5px) translateX(0);
-  width: 100%;
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-}
-
-.book.the-power h2 span {
-  display: block;
-  color: white;
-}
-
-.book.the-power h2 span:nth-child(2n) {
-  color: #17202A;
-}
-
-.book.the-power h3 span {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.book.the-power h3 {
-  font-size: .6em;
-  -webkit-transform: rotate(0) translateY(-5px) translateX(-95);
-  transform: rotate(0) translateY(-5px) translateX(-95px);
-  color: #17202A;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-align: center;
-  font-weight: bold;
-
-}
-
-.book.the-power:before {
-  position: absolute;
-  content: '';
-  height: 20px;
-  width: 20px;
-  background-color: #17202A;
-  bottom: 10px;
-  left: 20px;
-}
-
 .whered-you-go-bernadette {
   margin-top: 40px;
   height: 300px;
   background-color: #81C5C3;
   border: 2px solid #55807E;
-  position: relative;
 }
 
 .book.whered-you-go-bernadette h2 {
@@ -303,7 +242,6 @@ body {
   color: #063D61;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
-
 }
 
 .book.whered-you-go-bernadette .eye {
@@ -340,13 +278,18 @@ body {
   background-color: #063D61;
 }
 
+.book.whered-you-go-bernadette:after {
+  background-color: teal;
+}
+
+/* ---- */
+
 .my-sister-the-serial-killer {
   margin-top: 70px;
   height: 270px;
   background-color: #32332F;
   border: 2px solid black;
   padding: 10px 5px;
-  position: relative;
   color: #8AF27F;
   text-align: center;
   overflow: hidden;
@@ -416,33 +359,174 @@ body {
   text-transform: uppercase;
 }
 
-
-.book-blue {
-  background-color: lightblue;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+.book.my-sister-the-serial-killer:after {
+  background-color: black;
 }
 
-.book-umber {
+/* --- */
+
+.the-power {
+  height: 290px;
+  margin-top: 50px;
+  background-color: #D95440;
+  border: 2px solid #8D372A;
+}
+
+.book.the-power h2 {
+  text-transform: uppercase;
+  font-size: 19px;
+  -webkit-transform: rotate(0deg) translateY(0) translateX(0);
+  transform: rotate(0deg) translateY(-5px) translateX(0);
+  width: 100%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.book.the-power h2 span {
+  display: block;
+  color: white;
+}
+
+.book.the-power h2 span:nth-child(2n) {
+  color: #17202A;
+}
+
+.book.the-power h3 span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.book.the-power h3 {
+  font-size: .6em;
+  -webkit-transform: rotate(0) translateY(-5px) translateX(-95);
+  transform: rotate(0) translateY(-5px) translateX(-95px);
+  color: #17202A;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+.book.the-power:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  background-color: #17202A;
+  bottom: 10px;
+  left: 20px;
+}
+
+.book.the-power:after {
+  background-color: #CB4335;
+}
+
+/* -- */
+
+.we-should-all-be-feminists {
+  background-color: #F5F2E2;
+  height: 260px;
+  margin-top: 80px;
+  border: 1px solid #A3A29B;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.book.we-should-all-be-feminists:after {
+  background-color: #A3A29B;
+}
+
+.book.we-should-all-be-feminists h2 {
+  font-size: 8px;
+  -webkit-transform: rotate(0.25turn) translateY(-18px) translateX(5px);
+  transform: rotate(0.25turn) translateY(-18px) translateX(5px);
+}
+
+.book.we-should-all-be-feminists h3 {
+  font-size: 7px;
+  color: red;
+  -webkit-transform: rotate(0.25turn) translateY(-18px) translateX(120px);
+  transform: rotate(0.25turn) translateY(-18px) translateX(120px);
+}
+
+/* -- */
+
+.the-handmaids-tale {
+  height: 290px;
+  margin-top: 50px;
+  background-color: red;
+  border: 2px solid #8D372A;
+  text-transform: uppercase;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.book.the-handmaids-tale:after {
+  background-color: #712825;
+}
+
+.book.the-handmaids-tale:before {
+  position: absolute;
+  width: 100%;
+  height: 42px;
   background-color: tan;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  content: '';
 }
 
-.book-springer {
-  background-color: lightgoldenrodyellow;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  color: black;
+.book.the-handmaids-tale h2 {
+  width: 110px;
+  color: white;
+  text-align: center;
+  font-size: 11px;
+  -webkit-transform: rotate(0.25turn) translateY(-28px) translateX(39px);
+      transform: rotate(0.25turn) translateY(-28px) translateX(39px);
+  position: relative;
+  font-weight: normal;
+}
+
+.book.the-handmaids-tale h2:after {
+    background-color: #8D322E;
+    position: absolute;
+    content: '';
+    height: 38px;
+    width: 115%;
+    top: -10px;
+    left: -6px;
+    z-index: -1;
+}
+
+.book.the-handmaids-tale h3 {
+  width: 110px;
+  font-size: 10px;
+  color: lightgray;
+  -webkit-transform: rotate(0.25turn) translateY(-22px) translateX(131px);
+  transform: rotate(0.25turn) translateY(-22px) translateX(131px);
+  position: relative;
+  font-weight: normal;
+}
+
+.book.the-handmaids-tale h3:after {
+  background-color: #0D1114;
+    position: absolute;
+    content: '';
+    height: 38px;
+    width: 110%;
+    top: -15.5px;
+    left: -8px;
+    z-index: -1;
 }
 
 
 
-/* .book.medium-book h2,
-.book.large-book h2 {
-    transform: rotate(0.25turn) translateY(-56px);
-}  */
+/* -- */
 
-.stacked .book {
-  margin-top: 20px;
+.cinder {
+  height: 280px;
+  margin-top: 60px;
+  background-color: blue;
+  border: 2px solid navy;
 }
+
+.book.cinder:after {
+  background-color: navy;
+}
+
