@@ -1,3 +1,5 @@
+/* GENERAL STYLES */
+
 * {
   box-sizing: border-box;
 }
@@ -10,6 +12,8 @@ body {
   background-color: lightgray;
 }
 
+/* BOOKSHELF STYLES */
+
 .bookshelf-wrapper {
   margin: 50px 0;
 }
@@ -18,11 +22,9 @@ body {
   width: 80%;
   height: 100%;
   margin: 0 auto;
-  /* border: 15px purple solid; */
   overflow: hidden;
   background-image: linear-gradient(transparent, transparent 320px, white 320px, white 342px, white 342px, white 346px, white 348px, tan 350px);
   background-size: 10px 350px;
-  /* box-shadow: 0px 1000px 0px 400px darkgray; */
   padding: 0 20px;
   max-width: 750px;
   display: block;
@@ -32,16 +34,6 @@ body {
   position: relative;
   z-index: 1;
 }
-
-/* .bookshelf-top:after {
-  position: absolute;
-  content: '';
-  height: 15px;
-  width: 100%;
-  left: 0;
-  bottom: -240px;
-  background-color: tan;
-} */
 
 .bookshelf-top {
   width: 80%;
@@ -83,21 +75,7 @@ body {
   font-size: 35px;
 }
 
-.book {
-  height: 320px;
-  width: 40px;
-  float: left;
-  color: black;
-  font-size: 0.9em;
-  font-family: Verdana, sans-serif;
-  margin-bottom: 10px;
-  margin-top: 20px;
-  border: 1px solid black;
-  -webkit-transition: -webkit-transform 0.4s ease;
-  transition: -webkit-transform 0.4s ease;
-  transition: transform 0.4s ease;
-  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
-}
+/* BOOKSHELF ITEMS */
 
 /* .plant {
   height: 320px;
@@ -143,6 +121,38 @@ body {
   border: 2px solid #746D4E;
 } */
 
+
+/* BOOK STYLES GENERAL */
+
+.book {
+  height: 320px;
+  width: 40px;
+  float: left;
+  color: black;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  position: relative;
+  background-color: gray;
+  border: 2px solid dimgray;
+}
+
+.book:after {
+  position: absolute;
+  content: '';
+  height: 101.5%;
+  width: 100px;
+  top: -2px;
+  right: -100px;
+  z-index: -1;
+  clip-path: polygon(0 0, 31% 6%, 31% 90%, 0% 100%);
+  box-shadow: 5px 5px 0 black;
+}
+
+.book.upcoming:after {
+  background-color: dimgray;
+}
+
 .stacked {
     transform-origin: 0 0;
     transform: rotate(-90deg) translateY(-4px) translateX(-340px);
@@ -150,27 +160,8 @@ body {
     float: left;
 }
 
-/* .book-tilted {
-  float: left;
-  width: 74px;
-}
-
-.book-tilted > .book {
-  -webkit-transform: translateY(-3px) translateX(15px) rotate(9deg);
-          transform: translateY(-3px) translateX(15px) rotate(9deg);
-} */
-
-/* .book:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-} */
-
 .extra-small-book {
     width: 30px;
-}
-
-.book.extra-small-book h2 {
-    transform: rotate(0.25turn) translateY(-27px);
 }
 
 .small-book {
@@ -189,10 +180,8 @@ body {
     width: 90px;
 }
 
-.book-green {
-  background-color: lavender;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+.book.extra-small-book h2 {
+    transform: rotate(0.25turn) translateY(-27px);
 }
 
 .book h2 {
@@ -215,6 +204,19 @@ body {
   width: 250px;
 }
 
+/* BOOK STYLES INDIVIDUAL */
+
+.book.whered-you-go-bernadette:after {
+  background-color: teal;
+}
+
+.book.my-sister-the-serial-killer:after {
+  background-color: black;
+}
+
+.book.the-power:after {
+  background-color: #CB4335;
+}
 .we-should-all-be-feminists {
   background-color: #F5F2E2;
   height: 260px;
@@ -227,7 +229,7 @@ body {
   height: 290px;
   margin-top: 50px;
   background-color: #D95440;
-  border: 1px solid #8D372A;
+  border: 2px solid #8D372A;
   position: relative;
 }
 
@@ -280,7 +282,7 @@ body {
   margin-top: 40px;
   height: 300px;
   background-color: #81C5C3;
-  border: 1px solid #55807E;
+  border: 2px solid #55807E;
   position: relative;
 }
 
@@ -308,7 +310,7 @@ body {
   height: 20px;
   width: 30px;
   position: absolute;
-  bottom: 80px;
+  bottom: 73px;
   left: 5px;
 }
 
@@ -342,7 +344,7 @@ body {
   margin-top: 70px;
   height: 270px;
   background-color: #32332F;
-  border: 1px solid black;
+  border: 2px solid black;
   padding: 10px 5px;
   position: relative;
   color: #8AF27F;
@@ -364,14 +366,6 @@ body {
 .my-sister-the-serial-killer span {
   display: block;
   margin-bottom: 5px;
-}
-
-.my-sister-the-serial-killer span:nth-child(1) {
-  font-size: 2.5em;
-}
-
-.my-sister-the-serial-killer span:nth-child(3) {
-  font-size: 2em;
 }
 
 .my-sister-the-serial-killer h2 {
@@ -398,6 +392,20 @@ body {
 
 .book.my-sister-the-serial-killer h3 span:nth-child(3){
   font-size: 8px;
+}
+
+.my-sister-the-serial-killer h2 span:nth-child(1) {
+  font-size: 2.5em;
+}
+
+.my-sister-the-serial-killer h2 span:nth-child(3) {
+  font-size: 2em;
+}
+
+.my-sister-the-serial-killer h2 span:nth-child(2),
+.my-sister-the-serial-killer h2 span:nth-child(4),
+.my-sister-the-serial-killer h2 span:nth-child(5)  {
+  font-size: 5px;
 }
 
 .my-sister-the-serial-killer h3 {
