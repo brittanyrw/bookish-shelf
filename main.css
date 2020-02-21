@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-color: lightgray;
+  background-color: white;
 }
 
 /* BOOKSHELF STYLES */
@@ -23,7 +23,7 @@ body {
   height: 100%;
   margin: 0 auto;
   overflow: hidden;
-  background-image: linear-gradient(transparent, transparent 320px, white 320px, white 342px, white 342px, white 346px, white 348px, tan 350px);
+  background-image: linear-gradient(transparent, transparent 310px, #D59256 310px, #CA6F1E 342px, #D59256 342px, #D59256 346px, #C1854F 348px, tan 350px);
   background-size: 10px 350px;
   padding: 0 20px;
   max-width: 750px;
@@ -68,7 +68,6 @@ body {
   text-transform: uppercase;
   margin: 0;
   font-family: 'Zilla Slab', serif;
-  opacity: 0;
 }
 
 .letterboard p:last-child {
@@ -77,16 +76,17 @@ body {
 
 /* BOOKSHELF ITEMS */
 
-/* .plant {
+.plant {
   height: 320px;
-  width: 250px;
+  width: 200px;
   float: left;
   margin-top: 20px;
+  margin-left: 15px;
   position: relative;
-  background-color: lightgray;
-} */
+  /* background-color: lightgray; */
+}
 
-/* .plant .leaves {
+.plant .leaves {
   position: absolute;
   height: 30px;
   width: 160px;
@@ -119,7 +119,7 @@ body {
   border-radius: 2px;
   top: -2px;
   border: 2px solid #746D4E;
-} */
+} 
 
 
 /* BOOK STYLES GENERAL */
@@ -522,11 +522,64 @@ body {
 .cinder {
   height: 280px;
   margin-top: 60px;
-  background-color: blue;
-  border: 2px solid navy;
+  background-color: #212F3D;
+  border: 2px solid #17202A;
+  color: white;
+}
+
+.cinder h2 {
+  font-family: 'MedievalSharp', cursive;
+  -webkit-transform: rotate(0deg) translateY(0) translateX(0);
+  transform: rotate(0deg) translateY(30px) translateX(15px);
+  width: 18px;
+  font-size: 23px;
+  word-break: break-all;
+  text-align: center;
+  line-height: 22px;
+}
+
+.cinder h2 span {
+  font-size: 45px;
+}
+
+.cinder h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  -webkit-transform: rotate(0deg) translateY(0) translateX(0);
+  transform: rotate(0deg) translateY(-160px) translateX(10px);
+  color: #B6413C;
+}
+
+/* white area at the bottom */
+.book.cinder:before {
+  position: absolute;
+  content: '';
+  height: 100px;
+  width: 100%;
+  background-color: lightgray;
+  background: linear-gradient(198deg, rgba(33,47,61,1) 25%, rgba(83,94,104,1) 59%, rgba(228,228,228,1) 100%);
+  bottom: 0;
 }
 
 .book.cinder:after {
-  background-color: navy;
+  background-color: black;
+}
+
+.foot {
+  height: 80px;
+  width: 40px;
+  left: 7px;
+  bottom: 20px;
+  border: 1px solid red;
+  position: absolute;
+  content: '';
+}
+
+.leg {
+  position: absolute;
+  background-color: tan;
+  height: 70px;
+  width: 25px;
+  left: 6px;
+  content: '';
 }
 
