@@ -1,6 +1,5 @@
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 h2,
 h3,
@@ -8,16 +7,14 @@ h4,
 p {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-}
+  font-size: 14px; }
 
 .bookshelf {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
-  margin-bottom: 40px;
-}
+  margin-bottom: 40px; }
 
 .book {
   border: 2px solid black;
@@ -26,8 +23,7 @@ p {
   transition: -webkit-transform 0.4s ease;
   transition: transform 0.4s ease;
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .plant {
   height: 100px;
@@ -35,8 +31,7 @@ p {
   background-color: #739AC4;
   margin-right: 20px;
   position: relative;
-  border: 2px solid #445D76;
-}
+  border: 2px solid #445D76; }
 
 .plant p {
   position: absolute;
@@ -47,8 +42,7 @@ p {
   border: 2px solid #445D76;
   text-transform: uppercase;
   font-size: 13px;
-  left: 13px;
-}
+  left: 13px; }
 
 .plant:after {
   position: absolute;
@@ -57,8 +51,7 @@ p {
   width: 120px;
   background-color: #597797;
   border: 2px solid #445D76;
-  left: -14px;
-}
+  left: -14px; }
 
 .leaf {
   width: 50px;
@@ -72,8 +65,7 @@ p {
   left: 60px;
   box-shadow: 20px 0 teal;
   transform: rotate(180deg);
-  z-index: -1;
-}
+  z-index: -1; }
 
 .leaf:before {
   content: "";
@@ -86,8 +78,7 @@ p {
   position: absolute;
   top: 0px;
   right: -70px;
-  box-shadow: -20px 0 teal;
-}
+  box-shadow: -20px 0 teal; }
 
 .leaf:after {
   content: "";
@@ -100,15 +91,13 @@ p {
   transform: rotate(40deg);
   position: absolute;
   top: 0px;
-  left: 35px;
-}
+  left: 35px; }
 
 .firby {
   height: 200px;
   width: 150px;
   background-color: gray;
-  margin: 0 20px;
-}
+  margin: 0 20px; }
 
 .clock {
   height: 100px;
@@ -117,7 +106,7 @@ p {
   margin-right: 15px;
   border: 2px solid black;
   padding: 8px;
-}
+  display: block; }
 
 .clock .time {
   display: flex;
@@ -126,28 +115,23 @@ p {
   color: white;
   align-items: center;
   justify-content: center;
-  margin-bottom: 7px;
-}
+  margin-bottom: 7px; }
 
 .clock .time p {
   font-size: 40px;
-  margin: 0;
-}
+  margin: 0; }
 
 .book.upcoming {
   height: 300px;
   border-color: dimgray;
   color: dimgray;
-  background-color: lightgray;
-}
+  background-color: lightgray; }
 
 .book.upcoming h2 {
-  transform: rotate(0.25turn) translateY(-41px) translateX(10px);
-}
+  transform: rotate(0.25turn) translateY(-41px) translateX(10px); }
 
 .book.upcoming h3 {
-  transform: rotate(90deg) translateY(-23px) translateX(-3px);
-}
+  transform: rotate(90deg) translateY(-23px) translateX(-3px); }
 
 .stack {
   padding: 0 15px;
@@ -158,8 +142,7 @@ p {
   margin-bottom: 80px;
   margin-right: 20px;
   align-items: flex-end;
-  box-shadow: 0 5px 0 #C1854F;
-}
+  box-shadow: 0 5px 0 #C1854F; }
 
 .stack:before,
 .stack:after {
@@ -169,50 +152,39 @@ p {
   width: 15px;
   background-color: #99673B;
   z-index: -1;
-  bottom: -60px;
-}
+  bottom: -60px; }
 
 .stack:before {
-  left: 10px;
-}
+  left: 10px; }
 
 .stack:after {
-  right: 10px;
-}
+  right: 10px; }
 
 /* .stack.jan {
   border-color: #D6A06F;
   box-shadow: 0 5px 0 #C1854F;
 } */
-
 /* .stack.jan:before, .stack.jan:after {
   background-color: #99673B;
 } */
-
 .extra-small-book {
-  width: 30px;
-}
+  width: 30px; }
 
 .small-book {
-  width: 40px;
-}
+  width: 40px; }
 
 .medium-book {
-  width: 60px;
-}
+  width: 60px; }
 
 .large-book {
-  width: 75px;
-}
+  width: 75px; }
 
 .extra-large-book {
-  width: 90px;
-}
+  width: 90px; }
 
 .book:hover {
   transform: scale(1.3);
-  z-index: 99;
-}
+  z-index: 99; }
 
 .book h2 {
   padding: 0;
@@ -221,8 +193,7 @@ p {
   transform-origin: 0% 0%;
   -webkit-transform: rotate(0.25turn) translateY(-35px);
   transform: rotate(0.25turn) translateY(-35px);
-  width: 250px;
-}
+  width: 250px; }
 
 .book h3 {
   padding: 0;
@@ -231,14 +202,12 @@ p {
   transform-origin: 0 0;
   -webkit-transform: rotate(90deg) translateY(-15px) translateX(-20px);
   transform: rotate(90deg) translateY(-15px) translateX(-20px);
-  width: 250px;
-}
+  width: 250px; }
 
 .whered-you-go-bernadette {
   height: 310px;
   background-color: #81c5c3;
-  border: 2px solid #55807e;
-}
+  border: 2px solid #55807e; }
 
 .book.whered-you-go-bernadette h2 {
   color: white;
@@ -247,8 +216,7 @@ p {
   font-size: 0.6em;
   letter-spacing: 1.1px;
   -webkit-transform: rotate(0.25turn) translateY(-25px) translateX(15px);
-  transform: rotate(0.25turn) translateY(-24px) translateX(15px);
-}
+  transform: rotate(0.25turn) translateY(-24px) translateX(15px); }
 
 .book.whered-you-go-bernadette h3 {
   font-size: 0.6em;
@@ -256,22 +224,19 @@ p {
   transform: rotate(90deg) translateY(-24px) translateX(218px);
   color: #063d61;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .book.whered-you-go-bernadette .eye {
   height: 20px;
   width: 30px;
   position: absolute;
   bottom: 85px;
-  left: 5px;
-}
+  left: 5px; }
 
 .book.whered-you-go-bernadette .eye:before,
 .book.whered-you-go-bernadette .eye:after {
   content: "";
-  position: absolute;
-}
+  position: absolute; }
 
 .book.whered-you-go-bernadette .eye:before {
   width: 20px;
@@ -280,8 +245,7 @@ p {
   left: 5px;
   background-color: white;
   border-radius: 0 80% 0 80%;
-  transform: rotate(-45deg);
-}
+  transform: rotate(-45deg); }
 
 .book.whered-you-go-bernadette .eye:after {
   width: 11px;
@@ -289,15 +253,12 @@ p {
   left: 9px;
   top: 4px;
   border-radius: 100%;
-  background-color: #063d61;
-}
+  background-color: #063d61; }
 
 .book.whered-you-go-bernadette:after {
-  background-color: teal;
-}
+  background-color: teal; }
 
 /* ---- */
-
 .my-sister-the-serial-killer {
   height: 270px;
   background-color: #32332f;
@@ -305,8 +266,7 @@ p {
   padding: 10px 5px;
   color: #8af27f;
   text-align: center;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .my-sister-the-serial-killer:before {
   position: absolute;
@@ -316,13 +276,11 @@ p {
   background-color: red;
   transform: rotate(45deg);
   bottom: 20px;
-  left: -40px;
-}
+  left: -40px; }
 
 .my-sister-the-serial-killer span {
   display: block;
-  margin-bottom: 5px;
-}
+  margin-bottom: 5px; }
 
 .my-sister-the-serial-killer h2 {
   text-transform: uppercase;
@@ -330,58 +288,46 @@ p {
   letter-spacing: 1.1px;
   -webkit-transform: rotate(0deg) translateY(0) translateX(0);
   transform: rotate(0deg) translateY(0) translateX(0);
-  width: 100%;
-}
+  width: 100%; }
 
 .book.my-sister-the-serial-killer h3 span {
-  display: block;
-}
+  display: block; }
 
 .book.my-sister-the-serial-killer h3 span:nth-child(1) {
-  font-size: 5.5px;
-}
+  font-size: 5.5px; }
 
 .book.my-sister-the-serial-killer h3 span:nth-child(2) {
-  font-size: 7px;
-}
+  font-size: 7px; }
 
 .book.my-sister-the-serial-killer h3 span:nth-child(3) {
-  font-size: 8px;
-}
+  font-size: 8px; }
 
 .my-sister-the-serial-killer h2 span:nth-child(1) {
-  font-size: 2.5em;
-}
+  font-size: 2.5em; }
 
 .my-sister-the-serial-killer h2 span:nth-child(3) {
-  font-size: 2em;
-}
+  font-size: 2em; }
 
 .my-sister-the-serial-killer h2 span:nth-child(2),
 .my-sister-the-serial-killer h2 span:nth-child(4),
 .my-sister-the-serial-killer h2 span:nth-child(5) {
-  font-size: 5px;
-}
+  font-size: 5px; }
 
 .my-sister-the-serial-killer h3 {
   font-size: 0.4em;
   -webkit-transform: rotate(0deg) translateY(50px) translateX(0);
   transform: rotate(0deg) translateY(50px) translateX(0);
   width: 100%;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 .book.my-sister-the-serial-killer:after {
-  background-color: black;
-}
+  background-color: black; }
 
 /* --- */
-
 .the-power {
   height: 290px;
   background-color: #d95440;
-  border: 2px solid #8d372a;
-}
+  border: 2px solid #8d372a; }
 
 .book.the-power h2 {
   text-transform: uppercase;
@@ -390,22 +336,18 @@ p {
   transform: rotate(0deg) translateY(20px) translateX(0);
   width: 100%;
   text-align: center;
-  font-family: "Raleway", sans-serif;
-}
+  font-family: "Raleway", sans-serif; }
 
 .book.the-power h2 span {
   display: block;
-  color: white;
-}
+  color: white; }
 
 .book.the-power h2 span:nth-child(2n) {
-  color: #17202a;
-}
+  color: #17202a; }
 
 .book.the-power h3 span {
   display: block;
-  margin-bottom: 5px;
-}
+  margin-bottom: 5px; }
 
 .book.the-power h3 {
   font-size: 0.6em;
@@ -417,8 +359,7 @@ p {
   font-weight: bold;
   line-height: 5px;
   margin-top: 10px;
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px; }
 
 .book.the-power:before {
   position: absolute;
@@ -427,61 +368,50 @@ p {
   width: 20px;
   background-color: #17202a;
   bottom: 10px;
-  left: 20px;
-}
+  left: 20px; }
 
 .book.the-power:after {
-  background-color: #cb4335;
-}
+  background-color: #cb4335; }
 
 /* -- */
-
 .we-should-all-be-feminists {
   background-color: #f5f2e2;
   height: 260px;
   border: 1px solid #a3a29b;
   font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 .book.we-should-all-be-feminists:after {
-  background-color: #a3a29b;
-}
+  background-color: #a3a29b; }
 
 .book.we-should-all-be-feminists h2 {
   font-size: 8px;
   -webkit-transform: rotate(0.25turn) translateY(-18px) translateX(13px);
-  transform: rotate(0.25turn) translateY(-18px) translateX(13px);
-}
+  transform: rotate(0.25turn) translateY(-18px) translateX(13px); }
 
 .book.we-should-all-be-feminists h3 {
   font-size: 7px;
   color: red;
   -webkit-transform: rotate(0.25turn) translateY(-18px) translateX(138px);
-  transform: rotate(0.25turn) translateY(-18px) translateX(138px);
-}
+  transform: rotate(0.25turn) translateY(-18px) translateX(138px); }
 
 /* -- */
-
 .the-handmaids-tale {
   height: 290px;
   background-color: red;
   border: 2px solid #8d372a;
   text-transform: uppercase;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
+  font-family: Georgia, "Times New Roman", Times, serif; }
 
 .book.the-handmaids-tale:after {
-  background-color: #712825;
-}
+  background-color: #712825; }
 
 .book.the-handmaids-tale:before {
   position: absolute;
   width: 100%;
   height: 42px;
   background-color: tan;
-  content: "";
-}
+  content: ""; }
 
 .book.the-handmaids-tale h2 {
   width: 110px;
@@ -491,8 +421,7 @@ p {
   -webkit-transform: rotate(0.25turn) translateY(-28px) translateX(39px);
   transform: rotate(0.25turn) translateY(-28px) translateX(39px);
   position: relative;
-  font-weight: normal;
-}
+  font-weight: normal; }
 
 .book.the-handmaids-tale h2:after {
   background-color: #8d322e;
@@ -502,8 +431,7 @@ p {
   width: 115%;
   top: -10px;
   left: -6px;
-  z-index: -1;
-}
+  z-index: -1; }
 
 .book.the-handmaids-tale h3 {
   width: 110px;
@@ -512,8 +440,7 @@ p {
   -webkit-transform: rotate(0.25turn) translateY(-22px) translateX(131px);
   transform: rotate(0.25turn) translateY(-22px) translateX(150px);
   position: relative;
-  font-weight: normal;
-}
+  font-weight: normal; }
 
 .book.the-handmaids-tale h3:after {
   background-color: #0d1114;
@@ -523,17 +450,14 @@ p {
   width: 115%;
   top: -15.5px;
   left: -14px;
-  z-index: -1;
-}
+  z-index: -1; }
 
 /* -- */
-
 .cinder {
   height: 280px;
   background-color: #212f3d;
   border: 2px solid #17202a;
-  color: white;
-}
+  color: white; }
 
 .cinder h2 {
   font-family: "MedievalSharp", cursive;
@@ -543,19 +467,16 @@ p {
   font-size: 23px;
   word-break: break-all;
   text-align: center;
-  line-height: 22px;
-}
+  line-height: 22px; }
 
 .cinder h2 span {
-  font-size: 45px;
-}
+  font-size: 45px; }
 
 .cinder h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
   -webkit-transform: rotate(0deg) translateY(0) translateX(0);
   transform: rotate(0deg) translateY(-125px) translateX(10px);
-  color: #b6413c;
-}
+  color: #b6413c; }
 
 /* white area at the bottom */
 .book.cinder:before {
@@ -564,18 +485,11 @@ p {
   height: 100px;
   width: 100%;
   background-color: lightgray;
-  background: linear-gradient(
-    198deg,
-    rgba(33, 47, 61, 1) 25%,
-    rgba(83, 94, 104, 1) 59%,
-    rgba(228, 228, 228, 1) 100%
-  );
-  bottom: 0;
-}
+  background: linear-gradient(198deg, #212f3d 25%, #535e68 59%, #e4e4e4 100%);
+  bottom: 0; }
 
 .book.cinder:after {
-  background-color: black;
-}
+  background-color: black; }
 
 /* .foot {
   height: 80px;
@@ -595,3 +509,117 @@ p {
   left: 6px;
   content: '';
 } */
+.book.pet {
+  background-color: lavender; }
+
+.book.becoming {
+  background-color: white; }
+
+.book.becoming h2 {
+  width: 140px;
+  color: #ADCED3;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  -webkit-transform: rotate(0.25turn) translateY(-28px) translateX(39px);
+  transform: rotate(0.25turn) translateY(-35px) translateX(0px);
+  position: relative;
+  font-weight: bold;
+  letter-spacing: 1.5px; }
+
+.book.becoming h3 {
+  width: 200px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ADCED3;
+  -webkit-transform: rotate(0.25turn) translateY(-22px) translateX(131px);
+  transform: rotate(0.25turn) translateY(-35px) translateX(120px);
+  position: relative;
+  font-weight: bold;
+  letter-spacing: 1.5px; }
+
+/* .book.the-right-swipe {
+  background-color: #DB76A8;
+  border-color: #913E67;
+}
+
+.book.the-right-swipe .woman, .book.the-right-swipe .dude {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px dashed white;
+  transform: translateX(7px);
+}
+
+.book.the-right-swipe .woman, .book.the-right-swipe .dude {
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.book.the-right-swipe .woman .body, .book.the-right-swipe .woman .hair, .book.the-right-swipe .woman .face, .book.the-right-swipe .dude .body, .book.the-right-swipe .dude .hair, .book.the-right-swipe .dude .face {
+  position: absolute;
+}
+
+.book.the-right-swipe .woman .body,
+.book.the-right-swipe .dude .body  {
+  height: 15px;
+  width: 100%;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.book.the-right-swipe .woman .face,
+.book.the-right-swipe .dude .face  {
+  height: 22px;
+  width: 17px;
+  top: 5px;
+  left: 12px;
+  border-radius: 50%;
+}
+
+.book.the-right-swipe .woman .face {
+  background-color: #644731;
+  z-index: 20;
+  position: relative;
+}
+
+.book.the-right-swipe .dude .face {
+  background-color: #865E40;
+}
+
+.book.the-right-swipe .woman .body {
+    background-color: #EDC974;
+}
+
+.book.the-right-swipe .dude .body {
+    background-color: black;
+}
+
+.book.the-right-swipe .cursive {
+  font-family: 'Sacramento';
+  font-size: 40px;
+  text-transform: lowercase;
+} */
+.stack.feb {
+  display: block; }
+
+.clock {
+  margin: auto; }
+
+.stack.feb .book {
+  margin: auto; }
+
+.stack.feb .voices-from-chernobyl {
+  width: 300px;
+  height: 60px; }
+
+.stack.feb .book h3,
+.stack.feb .book h2 {
+  transform: rotate(0deg); }
+
+.stack.feb .the-end-we-start-from {
+  height: 30px;
+  width: 320px; }
+
+/*# sourceMappingURL=main.css.map */
