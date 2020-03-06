@@ -263,13 +263,13 @@ p {
     text-transform: uppercase;
     font-weight: normal;
     letter-spacing: 1.1px;
-    -webkit-transform: rotate(90deg) translateY(-25px) translateX(15px);
+    -webkit-transform: rotate(90deg) translateY(-24px) translateX(15px);
     transform: rotate(90deg) translateY(-24px) translateX(15px); }
   .whered-you-go-bernadette.book h3 {
     color: #063d61;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-weight: bold;
-    -webkit-transform: rotate(90deg) translateY(-24px) translateX(-20px);
+    -webkit-transform: rotate(90deg) translateY(-24px) translateX(218px);
     transform: rotate(90deg) translateY(-24px) translateX(218px); }
   .whered-you-go-bernadette.book .eye {
     height: 20px;
@@ -343,158 +343,107 @@ p {
       font-size: 8px; }
 
 /*  The Power */
-/*  We Should All Be Feminists */
-/*  Cinder */
-/*  FEB Books ------------------------- */
-.book.voices-from-chernobyl {
-  background-color: tan;
-  color: black; }
-
-.book.the-end-we-start-from {
-  background-color: teal;
-  color: white; }
-
-/*  MAR Books ------------------------- */
-/*  APR Books ------------------------- */
-/*  MAY Books ------------------------- */
-/*  JUN Books ------------------------- */
-/*  JUL Books ------------------------- */
-/*  AUG Books ------------------------- */
-/*  SEP Books ------------------------- */
-/*  OCT Books ------------------------- */
-/*  NOV Books ------------------------- */
-/*  DEC Books ------------------------- */
-/* ---- */
-/* --- */
-.the-power {
+.the-power.book {
   height: 290px;
   background-color: #d95440;
   border: 2px solid #8d372a; }
+  .the-power.book h2 {
+    text-transform: uppercase;
+    font-size: 19px;
+    -webkit-transform: rotate(0deg) translateY(20px) translateX(0);
+    transform: rotate(0deg) translateY(20px) translateX(0);
+    width: 100%;
+    text-align: center;
+    font-family: "Raleway", sans-serif; }
+    .the-power.book h2 span {
+      display: block;
+      color: white; }
+      .the-power.book h2 span:nth-child(2n) {
+        color: #17202a; }
+  .the-power.book h3 {
+    font-size: 9.5px;
+    -webkit-transform: rotate(0) translateY(20px) translateX(-97px);
+    transform: rotate(0) translateY(20px) translateX(-97px);
+    color: #17202a;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-align: center;
+    font-weight: bold;
+    line-height: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .the-power.book h3 span {
+      display: block;
+      margin-bottom: 5px; }
+  .the-power.book:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #17202a;
+    bottom: 10px;
+    left: 20px; }
 
-.book.the-power h2 {
-  text-transform: uppercase;
-  font-size: 19px;
-  -webkit-transform: rotate(0deg) translateY(0) translateX(0);
-  transform: rotate(0deg) translateY(20px) translateX(0);
-  width: 100%;
-  text-align: center;
-  font-family: "Raleway", sans-serif; }
-
-.book.the-power h2 span {
-  display: block;
-  color: white; }
-
-.book.the-power h2 span:nth-child(2n) {
-  color: #17202a; }
-
-.book.the-power h3 span {
-  display: block;
-  margin-bottom: 5px; }
-
-.book.the-power h3 {
-  font-size: 0.6em;
-  -webkit-transform: rotate(0) translateY(-5px) translateX(-95);
-  transform: rotate(0) translateY(20px) translateX(-97px);
-  color: #17202a;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  text-align: center;
-  font-weight: bold;
-  line-height: 5px;
-  margin-top: 10px;
-  margin-bottom: 10px; }
-
-.book.the-power:before {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  background-color: #17202a;
-  bottom: 10px;
-  left: 20px; }
-
-.book.the-power:after {
-  background-color: #cb4335; }
-
-/* -- */
-.we-should-all-be-feminists {
+/*  We Should All Be Feminists */
+.we-should-all-be-feminists.book {
   background-color: #f5f2e2;
   height: 260px;
   border: 1px solid #a3a29b;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase; }
+  .we-should-all-be-feminists.book h2 {
+    font-size: 8px;
+    -webkit-transform: rotate(90deg) translateY(-18px) translateX(13px);
+    transform: rotate(90deg) translateY(-18px) translateX(13px); }
+  .we-should-all-be-feminists.book h3 {
+    font-size: 7px;
+    color: red;
+    -webkit-transform: rotate(90deg) translateY(-18px) translateX(138px);
+    transform: rotate(90deg) translateY(-18px) translateX(138px); }
 
-.book.we-should-all-be-feminists:after {
-  background-color: #a3a29b; }
-
-.book.we-should-all-be-feminists h2 {
-  font-size: 8px;
-  -webkit-transform: rotate(0.25turn) translateY(-18px) translateX(13px);
-  transform: rotate(0.25turn) translateY(-18px) translateX(13px); }
-
-.book.we-should-all-be-feminists h3 {
-  font-size: 7px;
-  color: red;
-  -webkit-transform: rotate(0.25turn) translateY(-18px) translateX(138px);
-  transform: rotate(0.25turn) translateY(-18px) translateX(138px); }
-
-/* -- */
-.the-handmaids-tale {
+/* The Handmaid's Tale */
+.the-handmaids-tale.book {
   height: 290px;
-  background-color: red;
+  background-color: #8d322e;
   border: 2px solid #8d372a;
   text-transform: uppercase;
   font-family: Georgia, "Times New Roman", Times, serif; }
+  .the-handmaids-tale.book:before {
+    position: absolute;
+    width: 100%;
+    height: 42px;
+    background-color: tan;
+    content: ""; }
+  .the-handmaids-tale.book h2, .the-handmaids-tale.book h3 {
+    width: 110px;
+    position: relative;
+    font-weight: normal; }
+    .the-handmaids-tale.book h2:after, .the-handmaids-tale.book h3:after {
+      position: absolute;
+      content: "";
+      height: 38px;
+      width: 115%;
+      z-index: -1; }
+  .the-handmaids-tale.book h2 {
+    color: white;
+    text-align: center;
+    font-size: 11px;
+    -webkit-transform: rotate(90deg) translateY(-28px) translateX(39px);
+    transform: rotate(90deg) translateY(-28px) translateX(39px); }
+    .the-handmaids-tale.book h2:after {
+      background-color: #8d322e;
+      top: -10px;
+      left: -6px; }
+  .the-handmaids-tale.book h3 {
+    font-size: 10px;
+    color: lightgray;
+    -webkit-transform: rotate(90deg) translateY(-22px) translateX(150px);
+    transform: rotate(90deg) translateY(-22px) translateX(150px); }
+    .the-handmaids-tale.book h3:after {
+      background-color: #0d1114;
+      top: -15.5px;
+      left: -14px; }
 
-.book.the-handmaids-tale:after {
-  background-color: #712825; }
-
-.book.the-handmaids-tale:before {
-  position: absolute;
-  width: 100%;
-  height: 42px;
-  background-color: tan;
-  content: ""; }
-
-.book.the-handmaids-tale h2 {
-  width: 110px;
-  color: white;
-  text-align: center;
-  font-size: 11px;
-  -webkit-transform: rotate(0.25turn) translateY(-28px) translateX(39px);
-  transform: rotate(0.25turn) translateY(-28px) translateX(39px);
-  position: relative;
-  font-weight: normal; }
-
-.book.the-handmaids-tale h2:after {
-  background-color: #8d322e;
-  position: absolute;
-  content: "";
-  height: 38px;
-  width: 115%;
-  top: -10px;
-  left: -6px;
-  z-index: -1; }
-
-.book.the-handmaids-tale h3 {
-  width: 110px;
-  font-size: 10px;
-  color: lightgray;
-  -webkit-transform: rotate(0.25turn) translateY(-22px) translateX(131px);
-  transform: rotate(0.25turn) translateY(-22px) translateX(150px);
-  position: relative;
-  font-weight: normal; }
-
-.book.the-handmaids-tale h3:after {
-  background-color: #0d1114;
-  position: absolute;
-  content: "";
-  height: 38px;
-  width: 115%;
-  top: -15.5px;
-  left: -14px;
-  z-index: -1; }
-
-/* -- */
+/*  Cinder */
 .cinder {
   height: 280px;
   background-color: #212f3d;
@@ -551,6 +500,25 @@ p {
   left: 6px;
   content: '';
 } */
+/*  FEB Books ------------------------- */
+.voices-from-chernobyl.book {
+  background-color: tan;
+  color: black; }
+
+.the-end-we-start-from.book {
+  background-color: teal;
+  color: white; }
+
+/*  MAR Books ------------------------- */
+/*  APR Books ------------------------- */
+/*  MAY Books ------------------------- */
+/*  JUN Books ------------------------- */
+/*  JUL Books ------------------------- */
+/*  AUG Books ------------------------- */
+/*  SEP Books ------------------------- */
+/*  OCT Books ------------------------- */
+/*  NOV Books ------------------------- */
+/*  DEC Books ------------------------- */
 .book.pet {
   background-color: lavender; }
 
