@@ -80,6 +80,7 @@ p {
 }
 
 .shelf.feb {
+  display: block;
   border-bottom: 20px solid black;
   box-shadow: 0 5px 0 0 darkgray;
   border-radius: 0 0 2px 2px;
@@ -99,6 +100,12 @@ p {
   }
   &:after {
     right: 10px;
+  }
+  .book {
+    margin: auto;
+    h2, h3 {
+      transform: rotate(0deg);
+    }
   }
 }
 
@@ -292,10 +299,10 @@ p {
   height: 100px;
   width: 230px;
   background-color: lightgray;
-  margin-right: 15px;
   border: 2px solid black;
   padding: 8px;
   display: block;
+  margin: auto;
   .time {
     display: flex;
     background-color: black;
@@ -570,88 +577,166 @@ p {
 
 /*  Cinder */
 
-.cinder {
+.cinder.book {
   height: 280px;
   background-color: #212f3d;
   border: 2px solid #17202a;
   color: white;
-}
+  h2 {
+    font-family: "MedievalSharp", cursive;
+    -webkit-transform: rotate(0deg) translateY(50px) translateX(15px);
+    transform: rotate(0deg) translateY(50px) translateX(15px);
+    width: 18px;
+    font-size: 23px;
+    word-break: break-all;
+    text-align: center;
+    line-height: 22px;    
+    span {
+      font-size: 45px;
+    }
+  }
+  h3 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    -webkit-transform: rotate(0deg) translateY(-125px) translateX(10px);
+    transform: rotate(0deg) translateY(-125px) translateX(10px);
+    color: #b6413c;
+  }
+  // .foot {
+  //   height: 80px;
+  //   width: 40px;
+  //   left: 7px;
+  //   bottom: 15px;
+  //   border: 1px solid red;
+  //   position: absolute;
+  //   content: '';
+  //   .leg {
+  //     position: absolute;
+  //     background-color: tan;
+  //     height: 70px;
+  //     width: 25px;
+  //     left: 6px;
+  //     content: '';      
+  //     .gears {
 
-.cinder h2 {
-  font-family: "MedievalSharp", cursive;
-  -webkit-transform: rotate(0deg) translateY(0) translateX(0);
-  transform: rotate(0deg) translateY(50px) translateX(15px);
-  width: 18px;
-  font-size: 23px;
-  word-break: break-all;
-  text-align: center;
-  line-height: 22px;
-}
+  //     }
+  //   }
+  //   .shoe {
 
-.cinder h2 span {
-  font-size: 45px;
+  //   }
+  // }
+  &:before {
+    position: absolute;
+    content: "";
+    height: 100px;
+    width: 100%;
+    background-color: lightgray;
+    background: linear-gradient(
+      198deg,
+      rgba(33, 47, 61, 1) 25%,
+      rgba(83, 94, 104, 1) 59%,
+      rgba(228, 228, 228, 1) 100%
+    );
+    bottom: 0;
+  }
 }
-
-.cinder h3 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  -webkit-transform: rotate(0deg) translateY(0) translateX(0);
-  transform: rotate(0deg) translateY(-125px) translateX(10px);
-  color: #b6413c;
-}
-
-/* white area at the bottom */
-.book.cinder:before {
-  position: absolute;
-  content: "";
-  height: 100px;
-  width: 100%;
-  background-color: lightgray;
-  background: linear-gradient(
-    198deg,
-    rgba(33, 47, 61, 1) 25%,
-    rgba(83, 94, 104, 1) 59%,
-    rgba(228, 228, 228, 1) 100%
-  );
-  bottom: 0;
-}
-
-.book.cinder:after {
-  background-color: black;
-}
-
-/* .foot {
-  height: 80px;
-  width: 40px;
-  left: 7px;
-  bottom: 15px;
-  border: 1px solid red;
-  position: absolute;
-  content: '';
-}
-
-.leg {
-  position: absolute;
-  background-color: tan;
-  height: 70px;
-  width: 25px;
-  left: 6px;
-  content: '';
-} */
 
 /*  FEB Books ------------------------- */
+
+/*  Voices From Chernobyl */
 
 .voices-from-chernobyl.book {
   background-color: tan;
   color: black;
 }
 
+.shelf.feb .voices-from-chernobyl {
+  width: 300px;
+  height: 40px;
+}
+
+/*  The End We Start From */
+
 .the-end-we-start-from.book {
   background-color: teal;
   color: white;
 }
 
+.shelf.feb .the-end-we-start-from {
+  height: 30px;
+  width: 320px;
+}
+
 /*  MAR Books ------------------------- */
- 
+
+/*  Pet */
+
+.pet.book {
+  background-color: lavender;
+}
+
+/*  The Right Swipe */
+
+.the-right-swipe.book {
+  background-color: #DB76A8;
+  border-color: #913E67;
+  .cursive {
+    font-family: 'Sacramento';
+    font-size: 40px;
+    text-transform: lowercase;
+  }
+  .woman, .dude {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px dashed white;
+    transform: translateX(7px);
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    .body, .hair, .face {
+      position: absolute;
+    }
+    .body {
+      height: 15px;
+      width: 100%;
+      bottom: 0;
+      border-radius: 50% 50% 0 0;
+    }
+    .face {
+      height: 22px;
+      width: 17px;
+      top: 5px;
+      left: 12px;
+      border-radius: 50%;
+    }
+  }
+  .woman {
+    .body {
+      background-color: #EDC974;
+    }
+    .hair {
+
+    }
+    .face {
+      background-color: #644731;
+      z-index: 20;
+      position: relative;
+    }
+  }
+
+  .dude {
+    .body {
+      background-color: black;
+    }
+    .hair {
+
+    }
+    .face {
+      background-color: #865E40;
+    }
+  }
+}
+
 /*  APR Books ------------------------- */
 
 /*  MAY Books ------------------------- */
@@ -669,98 +754,3 @@ p {
 /*  NOV Books ------------------------- */
 
 /*  DEC Books ------------------------- */
-
-.book.pet {
-  background-color: lavender;
-}
-
-.book.the-right-swipe {
-  background-color: #DB76A8;
-  border-color: #913E67;
-}
-
-.book.the-right-swipe .woman, .book.the-right-swipe .dude {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border: 1px dashed white;
-  transform: translateX(7px);
-}
-
-.book.the-right-swipe .woman, .book.the-right-swipe .dude {
-  margin-top: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-.book.the-right-swipe .woman .body, .book.the-right-swipe .woman .hair, .book.the-right-swipe .woman .face, .book.the-right-swipe .dude .body, .book.the-right-swipe .dude .hair, .book.the-right-swipe .dude .face {
-  position: absolute;
-}
-
-.book.the-right-swipe .woman .body,
-.book.the-right-swipe .dude .body  {
-  height: 15px;
-  width: 100%;
-  bottom: 0;
-  border-radius: 50% 50% 0 0;
-}
-
-.book.the-right-swipe .woman .face,
-.book.the-right-swipe .dude .face  {
-  height: 22px;
-  width: 17px;
-  top: 5px;
-  left: 12px;
-  border-radius: 50%;
-}
-
-.book.the-right-swipe .woman .face {
-  background-color: #644731;
-  z-index: 20;
-  position: relative;
-}
-
-.book.the-right-swipe .dude .face {
-  background-color: #865E40;
-}
-
-.book.the-right-swipe .woman .body {
-    background-color: #EDC974;
-}
-
-.book.the-right-swipe .dude .body {
-    background-color: black;
-}
-
-.book.the-right-swipe .cursive {
-  font-family: 'Sacramento';
-  font-size: 40px;
-  text-transform: lowercase;
-}
-
-.shelf.feb {
-  display: block;
-}
-
-.clock {
-  margin: auto;
-}
-
-.shelf.feb .book {
-  margin: auto;
-}
-
-.shelf.feb .voices-from-chernobyl {
-  width: 300px;
-  height: 40px;
-}
-
-.shelf.feb .book h3, 
-.shelf.feb .book h2 {
-  transform: rotate(0deg)
-}
-
-.shelf.feb .the-end-we-start-from {
-  height: 30px;
-  width: 320px;
-}
