@@ -27,17 +27,110 @@ p {
   margin-bottom: 40px;
 }
 
-.stack.feb {
-  border-color: black;
-  border-radius: 0 0 2px 2px;
-  box-shadow: 0 5px 0 0 darkgray;
+.shelf {
+  padding: 0 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  margin-right: 20px;
+  align-items: flex-end;
+  &:before, 
+  &:after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+  }
 }
 
-.stack.feb:before, .stack.feb:after {
-  bottom: -25px;
-  background-color: transparent;
-  width: 30px;
-  box-shadow: 0 5px 0 0 black, 0 15px 0 0 dimgray, 0 25px 0 0 gray, 0 35px 0 0 lightgray;
+.shelf.upcoming {
+  border-bottom: 20px solid black;
+  box-shadow: 0 5px 0 gray;
+  &:before,
+  &:after {
+    background-color: dimgray;
+    height: 50px;
+    width: 15px;
+    bottom: -60px;
+  }
+  &:before {
+    left: 10px; 
+  }
+  &:after {
+    right: 10px;
+  }
+}
+
+.shelf.jan {
+  border-bottom: 20px solid #D6A06F;
+  box-shadow: 0 5px 0 #C1854F;
+  &:before,
+  &:after {
+    background-color: #99673B;    
+    height: 50px;
+    width: 15px;
+    bottom: -60px;
+  }
+  &:before {
+    left: 15px;
+  }
+  &:after {
+    right: 15px;
+  }
+}
+
+.shelf.feb {
+  border-bottom: 20px solid black;
+  box-shadow: 0 5px 0 0 darkgray;
+  border-radius: 0 0 2px 2px;
+  &:before, 
+  &:after {
+    height: 50px;
+    width: 30px;
+    bottom: -25px;
+    background-color: transparent;
+    box-shadow: 0 5px 0 0 black, 
+    0 15px 0 0 dimgray, 
+    0 25px 0 0 gray, 
+    0 35px 0 0 lightgray;    
+  }
+  &:before {
+    left: 10px;
+  }
+  &:after {
+    right: 10px;
+  }
+}
+
+.shelf.apr {
+  .stacked-books {
+    margin: 0 20px;
+    .book {
+      h3, h2 {
+        transform: rotate(0deg);
+      }
+    }
+    .book:nth-child(2){
+      width: 300px;
+      height: 60px;
+    }
+    .book:nth-child(3){
+      height: 30px;
+      width: 320px;
+    }
+    .book:nth-child(4){
+      width: 300px;
+      height: 60px;
+    }
+    .book:nth-child(5){
+      height: 30px;
+      width: 320px;
+    }  
+    .book:nth-child(6){
+      height: 30px;
+      width: 320px;
+    }      
+  }
 }
 
 /* -------------------
@@ -51,32 +144,67 @@ p {
   transition: transform 0.4s ease;
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
   cursor: pointer;
+  h2, h3 {
+    padding: 0;
+    transform-origin: 0 0;
+    width: 250px;
+  }
+  h2 {
+    font-size: 12px;
+    -webkit-transform: rotate(90deg) translateY(-35px) translateX(0);
+    transform: rotate(90deg) translateY(-35px) translateX(0);
+  }
+  h3 {
+    font-size: 11px;
+    -webkit-transform: rotate(90deg) translateY(-15px) translateX(-20px);
+    transform: rotate(90deg) translateY(-15px) translateX(-20px);
+  }
+  &:hover {
+    transform: scale(1.3);
+    z-index: 99;    
+  }
 }
 
-
-.book.upcoming {
-  height: 300px;
-  color: dimgray;
-  background-color: lightgray;
-  border: 2px solid dimgray;
+.upcoming {
+  .book {
+    height: 300px;
+    color: dimgray;
+    background-color: lightgray;
+    border: 2px solid dimgray;
+    h2 {
+      transform: rotate(90deg) translateY(-30px) translateX(10px);
+    }
+    h3 {
+      transform: rotate(90deg) translateY(-15px) translateX(-3px);
+    }
+    &:nth-child(2n){
+      height: 280px;
+    }
+    &:nth-child(3n){
+      height: 310px;
+    }
+  }
 }
 
-.book.upcoming h2 {
-  transform: rotate(0.25turn) translateY(-30px) translateX(10px);
+.extra-small-book {
+  width: 30px;
 }
 
-.book.upcoming h3 {
-  transform: rotate(90deg) translateY(-15px) translateX(-3px);
+.small-book {
+  width: 40px;
 }
 
-.book.upcoming:nth-child(2n){
-  height: 280px;
+.medium-book {
+  width: 60px;
 }
 
-.book.upcoming:nth-child(3n){
-  height: 310px;
+.large-book {
+  width: 75px;
 }
 
+.extra-large-book {
+  width: 90px;
+}
 
 /* -------------------
     BOOKSHELF ITEMS 
@@ -200,7 +328,123 @@ p {
 
 /*  Where'd You Go Bernadette */
 
+.whered-you-go-bernadette.book {
+  height: 310px;
+  background-color: #81c5c3;
+  border: 2px solid #55807e;
+  h2, h3 {
+    font-size: 9.6px;
+  }
+  h2 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 1.1px;
+    -webkit-transform: rotate(90deg) translateY(-25px) translateX(15px);
+    transform: rotate(90deg) translateY(-24px) translateX(15px);
+  }
+  h3 {
+    color: #063d61;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+    -webkit-transform: rotate(90deg) translateY(-24px) translateX(-20px);
+    transform: rotate(90deg) translateY(-24px) translateX(218px);
+  }
+  .eye {
+    height: 20px;
+    width: 30px;
+    position: absolute;
+    bottom: 85px;
+    left: 5px;  
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+    }
+    &:before {
+      width: 20px;
+      height: 20px;
+      top: 0;
+      left: 5px;
+      background-color: white;
+      border-radius: 0 80% 0 80%;
+      transform: rotate(-45deg);
+    }
+    &:after {
+      width: 11px;
+      height: 11px;
+      left: 9px;
+      top: 4px;
+      border-radius: 100%;
+      background-color: #063d61;
+    }
+  }
+}
+
 /*  My Sister, the Serial Killer */
+
+.my-sister-the-serial-killer.book {
+  height: 270px;
+  background-color: #32332f;
+  border: 2px solid black;
+  padding: 10px 5px;
+  color: #8af27f;
+  text-align: center;
+  overflow: hidden;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 60px;
+    width: 60px;
+    background-color: red;
+    transform: rotate(45deg);
+    bottom: 20px;
+    left: -40px;    
+  }
+  span {
+    display: block;
+    margin-bottom: 5px;
+  }
+  h2, h3 {
+    text-transform: uppercase;
+    width: 100%;  
+  }
+  h2 {
+    font-size: 6.5px;
+    letter-spacing: 1.1px;
+    -webkit-transform: rotate(0deg) translateY(0) translateX(0);
+    transform: rotate(0deg) translateY(0) translateX(0);  
+    span {
+      &:nth-child(1){
+        font-size: 18px;
+      }
+      &:nth-child(3){
+        font-size: 13px;
+      }
+      &:nth-child(2), 
+      &:nth-child(4),
+      &:nth-child(5) {
+        font-size: 5px;
+      }
+    }
+  }
+  h3 {
+    font-size: 6px;
+    -webkit-transform: rotate(0deg) translateY(50px) translateX(0);
+    transform: rotate(0deg) translateY(50px) translateX(0);  
+    span {
+      &:nth-child(1){
+        font-size: 5.5px;
+      }
+      &:nth-child(2){
+        font-size: 7px
+      }
+      &:nth-child(3){
+        font-size: 8px;
+      }
+    }
+  }
+}
 
 /*  The Power */
 
@@ -224,35 +468,6 @@ p {
  
 /*  APR Books ------------------------- */
 
-.stack.apr {
-  .stacked-books {
-    margin: 0 20px;
-    .book {
-      h3, h2 {
-        transform: rotate(0deg);
-      }
-    }
-    .book:nth-child(2){
-      width: 300px;
-      height: 60px;
-    }
-    .book:nth-child(3){
-      height: 30px;
-      width: 320px;
-    }
-    .book:nth-child(4){
-      width: 300px;
-      height: 60px;
-    }
-    .book:nth-child(5){
-      height: 30px;
-      width: 320px;
-    }    
-  }
-}
-
-
-
 /*  MAY Books ------------------------- */
  
 /*  JUN Books ------------------------- */
@@ -271,239 +486,9 @@ p {
 
 
 
-
-
-
-
-
-
-
-
-.stack {
-  padding: 0 15px;
-  border-bottom: 20px solid #D6A06F;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 80px;
-  margin-right: 20px;
-  align-items: flex-end;
-  box-shadow: 0 5px 0 #C1854F;
-}
-
-.stack:before,
-.stack:after {
-  position: absolute;
-  content: "";
-  height: 50px;
-  width: 15px;
-  background-color: #99673B;
-  z-index: -1;
-  bottom: -60px;
-}
-
-.stack:before {
-  left: 10px;
-}
-
-.stack:after {
-  right: 10px;
-}
-
-/* .stack.jan {
-  border-color: #D6A06F;
-  box-shadow: 0 5px 0 #C1854F;
-} */
-
-/* .stack.jan:before, .stack.jan:after {
-  background-color: #99673B;
-} */
-
-.extra-small-book {
-  width: 30px;
-}
-
-.small-book {
-  width: 40px;
-}
-
-.medium-book {
-  width: 60px;
-}
-
-.large-book {
-  width: 75px;
-}
-
-.extra-large-book {
-  width: 90px;
-}
-
-.book:hover {
-  transform: scale(1.3);
-  z-index: 99;
-}
-
-.book h2 {
-  padding: 0;
-  font-size: 0.8em;
-  -webkit-transform-origin: 0% 0%;
-  transform-origin: 0% 0%;
-  -webkit-transform: rotate(0.25turn) translateY(-35px);
-  transform: rotate(0.25turn) translateY(-35px);
-  width: 250px;
-}
-
-.book h3 {
-  padding: 0;
-  font-size: 0.7em;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-transform: rotate(90deg) translateY(-15px) translateX(-20px);
-  transform: rotate(90deg) translateY(-15px) translateX(-20px);
-  width: 250px;
-}
-
-.whered-you-go-bernadette {
-  height: 310px;
-  background-color: #81c5c3;
-  border: 2px solid #55807e;
-}
-
-.book.whered-you-go-bernadette h2 {
-  color: white;
-  text-transform: uppercase;
-  font-weight: normal;
-  font-size: 0.6em;
-  letter-spacing: 1.1px;
-  -webkit-transform: rotate(0.25turn) translateY(-25px) translateX(15px);
-  transform: rotate(0.25turn) translateY(-24px) translateX(15px);
-}
-
-.book.whered-you-go-bernadette h3 {
-  font-size: 0.6em;
-  -webkit-transform: rotate(90deg) translateY(-24px) translateX(-20px);
-  transform: rotate(90deg) translateY(-24px) translateX(218px);
-  color: #063d61;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: bold;
-}
-
-.book.whered-you-go-bernadette .eye {
-  height: 20px;
-  width: 30px;
-  position: absolute;
-  bottom: 85px;
-  left: 5px;
-}
-
-.book.whered-you-go-bernadette .eye:before,
-.book.whered-you-go-bernadette .eye:after {
-  content: "";
-  position: absolute;
-}
-
-.book.whered-you-go-bernadette .eye:before {
-  width: 20px;
-  height: 20px;
-  top: 0;
-  left: 5px;
-  background-color: white;
-  border-radius: 0 80% 0 80%;
-  transform: rotate(-45deg);
-}
-
-.book.whered-you-go-bernadette .eye:after {
-  width: 11px;
-  height: 11px;
-  left: 9px;
-  top: 4px;
-  border-radius: 100%;
-  background-color: #063d61;
-}
-
-.book.whered-you-go-bernadette:after {
-  background-color: teal;
-}
-
 /* ---- */
 
-.my-sister-the-serial-killer {
-  height: 270px;
-  background-color: #32332f;
-  border: 2px solid black;
-  padding: 10px 5px;
-  color: #8af27f;
-  text-align: center;
-  overflow: hidden;
-}
 
-.my-sister-the-serial-killer:before {
-  position: absolute;
-  content: "";
-  height: 60px;
-  width: 60px;
-  background-color: red;
-  transform: rotate(45deg);
-  bottom: 20px;
-  left: -40px;
-}
-
-.my-sister-the-serial-killer span {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.my-sister-the-serial-killer h2 {
-  text-transform: uppercase;
-  font-size: 0.35em;
-  letter-spacing: 1.1px;
-  -webkit-transform: rotate(0deg) translateY(0) translateX(0);
-  transform: rotate(0deg) translateY(0) translateX(0);
-  width: 100%;
-}
-
-.book.my-sister-the-serial-killer h3 span {
-  display: block;
-}
-
-.book.my-sister-the-serial-killer h3 span:nth-child(1) {
-  font-size: 5.5px;
-}
-
-.book.my-sister-the-serial-killer h3 span:nth-child(2) {
-  font-size: 7px;
-}
-
-.book.my-sister-the-serial-killer h3 span:nth-child(3) {
-  font-size: 8px;
-}
-
-.my-sister-the-serial-killer h2 span:nth-child(1) {
-  font-size: 2.5em;
-}
-
-.my-sister-the-serial-killer h2 span:nth-child(3) {
-  font-size: 2em;
-}
-
-.my-sister-the-serial-killer h2 span:nth-child(2),
-.my-sister-the-serial-killer h2 span:nth-child(4),
-.my-sister-the-serial-killer h2 span:nth-child(5) {
-  font-size: 5px;
-}
-
-.my-sister-the-serial-killer h3 {
-  font-size: 0.4em;
-  -webkit-transform: rotate(0deg) translateY(50px) translateX(0);
-  transform: rotate(0deg) translateY(50px) translateX(0);
-  width: 100%;
-  text-transform: uppercase;
-}
-
-.book.my-sister-the-serial-killer:after {
-  background-color: black;
-}
 
 /* --- */
 
@@ -794,7 +779,7 @@ p {
   text-transform: lowercase;
 }
 
-.stack.feb {
+.shelf.feb {
   display: block;
 }
 
@@ -802,21 +787,21 @@ p {
   margin: auto;
 }
 
-.stack.feb .book {
+.shelf.feb .book {
   margin: auto;
 }
 
-.stack.feb .voices-from-chernobyl {
+.shelf.feb .voices-from-chernobyl {
   width: 300px;
-  height: 60px;
+  height: 40px;
 }
 
-.stack.feb .book h3, 
-.stack.feb .book h2 {
+.shelf.feb .book h3, 
+.shelf.feb .book h2 {
   transform: rotate(0deg)
 }
 
-.stack.feb .the-end-we-start-from {
+.shelf.feb .the-end-we-start-from {
   height: 30px;
   width: 320px;
 }
