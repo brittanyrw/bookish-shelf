@@ -1,3 +1,6 @@
+/* -------------------
+    GENERAL STYLES 
+---------------------- */
 * {
   box-sizing: border-box; }
 
@@ -9,6 +12,9 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px; }
 
+/* -------------------
+      BOOKSHELVES 
+---------------------- */
 .bookshelf {
   display: flex;
   justify-content: center;
@@ -16,8 +22,21 @@ p {
   padding: 20px;
   margin-bottom: 40px; }
 
+.stack.feb {
+  border-color: black;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 5px 0 0 darkgray; }
+
+.stack.feb:before, .stack.feb:after {
+  bottom: -25px;
+  background-color: transparent;
+  width: 30px;
+  box-shadow: 0 5px 0 0 black, 0 15px 0 0 dimgray, 0 25px 0 0 gray, 0 35px 0 0 lightgray; }
+
+/* -------------------
+  GENERAL BOOK STYLES 
+---------------------- */
 .book {
-  border: 2px solid black;
   position: relative;
   -webkit-transition: -webkit-transform 0.4s ease;
   transition: -webkit-transform 0.4s ease;
@@ -25,6 +44,28 @@ p {
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
   cursor: pointer; }
 
+.book.upcoming {
+  height: 300px;
+  color: dimgray;
+  background-color: lightgray;
+  border: 2px solid dimgray; }
+
+.book.upcoming h2 {
+  transform: rotate(0.25turn) translateY(-30px) translateX(10px); }
+
+.book.upcoming h3 {
+  transform: rotate(90deg) translateY(-15px) translateX(-3px); }
+
+.book.upcoming:nth-child(2n) {
+  height: 280px; }
+
+.book.upcoming:nth-child(3n) {
+  height: 310px; }
+
+/* -------------------
+    BOOKSHELF ITEMS 
+---------------------- */
+/* --- PLANT --- */
 .plant {
   height: 100px;
   width: 100px;
@@ -32,26 +73,24 @@ p {
   margin-right: 20px;
   position: relative;
   border: 2px solid #445D76; }
-
-.plant p {
-  position: absolute;
-  background-color: white;
-  text-align: center;
-  padding: 5px;
-  top: 40px;
-  border: 2px solid #445D76;
-  text-transform: uppercase;
-  font-size: 13px;
-  left: 13px; }
-
-.plant:after {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 120px;
-  background-color: #597797;
-  border: 2px solid #445D76;
-  left: -14px; }
+  .plant p {
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    top: 40px;
+    border: 2px solid #445D76;
+    text-transform: uppercase;
+    font-size: 13px;
+    left: 13px; }
+  .plant:after {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 120px;
+    background-color: #597797;
+    border: 2px solid #445D76;
+    left: -14px; }
 
 .leaf {
   width: 50px;
@@ -66,39 +105,32 @@ p {
   box-shadow: 20px 0 teal;
   transform: rotate(180deg);
   z-index: -1; }
+  .leaf:before, .leaf:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 0 50px;
+    -webkit-border-radius: 0 50px;
+    border-radius: 0 50px;
+    top: 0; }
+  .leaf:before {
+    background-color: green;
+    right: -70px;
+    box-shadow: -20px 0 teal; }
+  .leaf:after {
+    background-color: lightgreen;
+    transform: rotate(40deg);
+    left: 35px; }
 
-.leaf:before {
-  content: "";
-  width: 50px;
-  height: 50px;
-  background-color: green;
-  -moz-border-radius: 0 50px;
-  -webkit-border-radius: 0 50px;
-  border-radius: 0 50px;
-  position: absolute;
-  top: 0px;
-  right: -70px;
-  box-shadow: -20px 0 teal; }
-
-.leaf:after {
-  content: "";
-  width: 50px;
-  height: 50px;
-  background-color: lightgreen;
-  -moz-border-radius: 0 50px;
-  -webkit-border-radius: 0 50px;
-  border-radius: 0 50px;
-  transform: rotate(40deg);
-  position: absolute;
-  top: 0px;
-  left: 35px; }
-
+/* --- FIRBY --- */
 .firby {
   height: 200px;
   width: 150px;
   background-color: gray;
   margin: 0 20px; }
 
+/* --- ALARM CLOCK --- */
 .clock {
   height: 100px;
   width: 230px;
@@ -107,32 +139,70 @@ p {
   border: 2px solid black;
   padding: 8px;
   display: block; }
+  .clock .time {
+    display: flex;
+    background-color: black;
+    padding: 5px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7px; }
+    .clock .time p {
+      font-size: 40px;
+      margin: 0; }
 
-.clock .time {
-  display: flex;
-  background-color: black;
-  padding: 5px;
-  color: white;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 7px; }
+/* --- JAR --- */
+.jar {
+  width: 200px;
+  height: 150px;
+  background-color: dimgray;
+  margin: 0 auto; }
 
-.clock .time p {
-  font-size: 40px;
-  margin: 0; }
+/* -------------------
+   INDIVIDUAL BOOKS 
+---------------------- */
+/* JAN Books ------------------------- */
+/*  Where'd You Go Bernadette */
+/*  My Sister, the Serial Killer */
+/*  The Power */
+/*  We Should All Be Feminists */
+/*  Cinder */
+/*  FEB Books ------------------------- */
+.book.voices-from-chernobyl {
+  background-color: tan;
+  color: black; }
 
-.book.upcoming {
-  height: 300px;
-  border-color: dimgray;
-  color: dimgray;
-  background-color: lightgray; }
+.book.the-end-we-start-from {
+  background-color: teal;
+  color: white; }
 
-.book.upcoming h2 {
-  transform: rotate(0.25turn) translateY(-41px) translateX(10px); }
+/*  MAR Books ------------------------- */
+/*  APR Books ------------------------- */
+.stack.apr .stacked-books {
+  margin: 0 20px; }
+  .stack.apr .stacked-books .book h3, .stack.apr .stacked-books .book h2 {
+    transform: rotate(0deg); }
+  .stack.apr .stacked-books .book:nth-child(2) {
+    width: 300px;
+    height: 60px; }
+  .stack.apr .stacked-books .book:nth-child(3) {
+    height: 30px;
+    width: 320px; }
+  .stack.apr .stacked-books .book:nth-child(4) {
+    width: 300px;
+    height: 60px; }
+  .stack.apr .stacked-books .book:nth-child(5) {
+    height: 30px;
+    width: 320px; }
 
-.book.upcoming h3 {
-  transform: rotate(90deg) translateY(-23px) translateX(-3px); }
-
+/*  MAY Books ------------------------- */
+/*  JUN Books ------------------------- */
+/*  JUL Books ------------------------- */
+/*  AUG Books ------------------------- */
+/*  SEP Books ------------------------- */
+/*  OCT Books ------------------------- */
+/*  NOV Books ------------------------- */
+/*  DEC Books ------------------------- */
 .stack {
   padding: 0 15px;
   border-bottom: 20px solid #D6A06F;
@@ -512,95 +582,59 @@ p {
 .book.pet {
   background-color: lavender; }
 
-.book.becoming {
-  background-color: white; }
-
-.book.becoming h2 {
-  width: 140px;
-  color: #ADCED3;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 14px;
-  -webkit-transform: rotate(0.25turn) translateY(-28px) translateX(39px);
-  transform: rotate(0.25turn) translateY(-35px) translateX(0px);
-  position: relative;
-  font-weight: bold;
-  letter-spacing: 1.5px; }
-
-.book.becoming h3 {
-  width: 200px;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #ADCED3;
-  -webkit-transform: rotate(0.25turn) translateY(-22px) translateX(131px);
-  transform: rotate(0.25turn) translateY(-35px) translateX(120px);
-  position: relative;
-  font-weight: bold;
-  letter-spacing: 1.5px; }
-
-/* .book.the-right-swipe {
+.book.the-right-swipe {
   background-color: #DB76A8;
-  border-color: #913E67;
-}
+  border-color: #913E67; }
 
 .book.the-right-swipe .woman, .book.the-right-swipe .dude {
   height: 40px;
   width: 40px;
   border-radius: 50%;
   border: 1px dashed white;
-  transform: translateX(7px);
-}
+  transform: translateX(7px); }
 
 .book.the-right-swipe .woman, .book.the-right-swipe .dude {
   margin-top: 10px;
   position: relative;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .book.the-right-swipe .woman .body, .book.the-right-swipe .woman .hair, .book.the-right-swipe .woman .face, .book.the-right-swipe .dude .body, .book.the-right-swipe .dude .hair, .book.the-right-swipe .dude .face {
-  position: absolute;
-}
+  position: absolute; }
 
 .book.the-right-swipe .woman .body,
-.book.the-right-swipe .dude .body  {
+.book.the-right-swipe .dude .body {
   height: 15px;
   width: 100%;
   bottom: 0;
-  border-radius: 50% 50% 0 0;
-}
+  border-radius: 50% 50% 0 0; }
 
 .book.the-right-swipe .woman .face,
-.book.the-right-swipe .dude .face  {
+.book.the-right-swipe .dude .face {
   height: 22px;
   width: 17px;
   top: 5px;
   left: 12px;
-  border-radius: 50%;
-}
+  border-radius: 50%; }
 
 .book.the-right-swipe .woman .face {
   background-color: #644731;
   z-index: 20;
-  position: relative;
-}
+  position: relative; }
 
 .book.the-right-swipe .dude .face {
-  background-color: #865E40;
-}
+  background-color: #865E40; }
 
 .book.the-right-swipe .woman .body {
-    background-color: #EDC974;
-}
+  background-color: #EDC974; }
 
 .book.the-right-swipe .dude .body {
-    background-color: black;
-}
+  background-color: black; }
 
 .book.the-right-swipe .cursive {
   font-family: 'Sacramento';
   font-size: 40px;
-  text-transform: lowercase;
-} */
+  text-transform: lowercase; }
+
 .stack.feb {
   display: block; }
 
