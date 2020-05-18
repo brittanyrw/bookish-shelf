@@ -1,6 +1,9 @@
 /* -------------------
     GENERAL STYLES 
 ---------------------- */
+html {
+  scroll-behavior: smooth; }
+
 * {
   box-sizing: border-box; }
 
@@ -12,24 +15,27 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px; }
 
+a {
+  text-decoration: none; }
+
 /* -------------------
       BOOKSHELVES 
 ---------------------- */
 .bookshelf {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
   padding: 20px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  max-width: 1200px; }
 
 .shelf {
   padding: 0 15px;
   position: relative;
-  display: flex;
-  justify-content: center;
   margin-bottom: 80px;
   margin-right: 20px;
-  align-items: flex-end; }
+  align-self: end;
+  display: flex;
+  justify-content: center; }
   .shelf:before, .shelf:after {
     position: absolute;
     content: "";
@@ -104,13 +110,19 @@ p {
 /* -------------------
   GENERAL BOOK STYLES 
 ---------------------- */
+a {
+  align-self: flex-end;
+  margin-bottom: -4px; }
+
 .book {
   position: relative;
   -webkit-transition: -webkit-transform 0.4s ease;
   transition: -webkit-transform 0.4s ease;
   transition: transform 0.4s ease;
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
-  cursor: pointer; }
+  overflow: hidden;
+  display: inline-block;
+  align-self: flex-end; }
   .book h2, .book h3 {
     padding: 0;
     transform-origin: 0 0;
@@ -346,6 +358,18 @@ p {
       font-size: 7px; }
     .my-sister-the-serial-killer.book h3 span:nth-child(3) {
       font-size: 8px; }
+
+/* The Paper Hearts Society */
+.the-paper-hearts-society.book {
+  background-color: #F7DC6F;
+  height: 270px;
+  border: 2px solid goldenrod; }
+  .the-paper-hearts-society.book h2 {
+    -webkit-transform: rotate(90deg) translateY(-30px) translateX(10px);
+    transform: rotate(90deg) translateY(-30px) translateX(10px); }
+  .the-paper-hearts-society.book h3 {
+    -webkit-transform: rotate(90deg) translateY(-15px) translateX(0);
+    transform: rotate(90deg) translateY(-15px) translateX(0); }
 
 /*  The Power */
 .the-power.book {
